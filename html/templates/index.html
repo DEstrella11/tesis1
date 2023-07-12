@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detección de Enlaces Phishing</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Detección de Enlaces Phishing</h1>
+    </header>
+
+    <main>
+        <form action="/" method="post">
+            <label for="url">Ingrese un enlace:</label>
+            <input type="text" id="url" name="url">
+            <button type="submit">Verificar</button>
+        </form>
+
+        {% if result %}
+        <div class="result-container">
+            <h2>Resultado de la verificación de URL</h2>
+            <p><strong>URL:</strong> {{ url }}</p>
+            <p><strong>Resultado:</strong> {{ result }}</p>
+        </div>
+        {% endif %}
+    </main>
+</body>
+</html>

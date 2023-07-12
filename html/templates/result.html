@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detección de Enlaces Phishing</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Resultado de la verificación de URL</h1>
+    </header>
+
+    <main>
+        <p><strong>URL:</strong> {{ url }}</p>
+        <h2>Características:</h2>
+        <ul>
+            {% for feature in features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2><strong>Resultado:</strong></h2>
+        <p>{{ result }}</p>
+    </main>
+</body>
+</html>
